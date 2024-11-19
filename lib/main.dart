@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_mini_project/MVVM/view%20screen/admin/screens/adminhome.dart';
+import 'package:flutter_mini_project/MVVM/view%20screen/admin/screens/home/adminhome.dart';
 import 'package:flutter_mini_project/MVVM/view%20screen/admin/auth/adminlogin.dart';
 import 'package:flutter_mini_project/MVVM/view%20screen/admin/details.dart';
 import 'package:flutter_mini_project/MVVM/view%20screen/admin/auth/splashscreen.dart';
