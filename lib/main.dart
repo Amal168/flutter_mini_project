@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_mini_project/MVVM/view%20screen/admin/adminhome.dart';
-import 'package:flutter_mini_project/MVVM/view%20screen/admin/adminlogin.dart';
-import 'package:flutter_mini_project/MVVM/view%20screen/admin/splashscreen.dart';
+import 'package:flutter_mini_project/MVVM/view%20screen/admin/screens/adminhome.dart';
+import 'package:flutter_mini_project/MVVM/view%20screen/admin/auth/adminlogin.dart';
+import 'package:flutter_mini_project/MVVM/view%20screen/admin/details.dart';
+import 'package:flutter_mini_project/MVVM/view%20screen/admin/auth/splashscreen.dart';
 import 'package:get/get.dart';
 
 void main() {
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
       // home:Splashscreen() ,
       // home:  Adminlogin(),
       home:  Adminhome(),
+      // home:  studentDetails(),
     );
   }
 }

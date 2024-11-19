@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mini_project/MVVM/utils/widgets/custem.dart';
 import 'package:flutter_mini_project/MVVM/utils/widgets/customcolor.dart';
-import 'package:flutter_mini_project/MVVM/view%20screen/admin/adminhome.dart';
+import 'package:flutter_mini_project/MVVM/view%20screen/admin/screens/adminhome.dart';
 import 'package:flutter_mini_project/main.dart';
 import 'package:get/get.dart';
 
