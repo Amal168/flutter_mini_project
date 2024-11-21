@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mini_project/MVVM/utils/widgets/customcolor.dart';
 import 'package:flutter_mini_project/MVVM/view%20screen/admin/addevent.dart';
 
 class eventbutton extends StatefulWidget {
@@ -33,28 +34,34 @@ class _eventbuttonState extends State<eventbutton> {
       ),
       body: Center(
         child: ListView.builder(
+          
             itemCount: 1,
             itemBuilder: (context, index) {
-              return Card(
-                child: ListTile(
-                  title: Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Text(" "),
-                            Text("name"),
-                            IconButton(
-                                onPressed: () {}, icon: Icon(Icons.delete))
-                          ],
-                        ),
-                        Text("Date : "),
-                        Text("time : "),
-                        Text("Stage : "),
-                      ],
+              return Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Card(
+                  color: buttoncolor.f,
+                  child: ListTile(
+                    
+                    title: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Text(" "),
+                              Text("name"),
+                              IconButton(
+                                  onPressed: () {}, icon: Icon(Icons.delete))
+                            ],
+                          ),
+                          Text("Date : "),
+                          Text("time : "),
+                          Text("Stage : "),
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -62,6 +69,7 @@ class _eventbuttonState extends State<eventbutton> {
             }),
       ),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: buttoncolor.h,
         shape: Border(),
         onPressed: () {
           Navigator.push(

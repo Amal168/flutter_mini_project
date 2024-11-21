@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mini_project/MVVM/view%20screen/admin/screens/home/adminOrganizer.dart';
 import 'package:flutter_mini_project/MVVM/view%20screen/admin/screens/home/adminhome.dart';
 import 'package:flutter_mini_project/MVVM/view%20screen/admin/auth/adminlogin.dart';
 import 'package:flutter_mini_project/MVVM/view%20screen/admin/details.dart';
 import 'package:flutter_mini_project/MVVM/view%20screen/admin/auth/splashscreen.dart';
+import 'package:flutter_mini_project/MVVM/view%20screen/organizer/auth/slash2.dart';
+import 'package:flutter_mini_project/MVVM/view%20screen/organizer/organibottum/assign/assignbottum.dart';
+import 'package:flutter_mini_project/MVVM/view%20screen/organizer/organibottum/event/eventorgbottum.dart';
 import 'package:get/get.dart';
 
 void main() {
@@ -26,8 +30,12 @@ class MyApp extends StatelessWidget {
       ),
       // home:Splashscreen() ,
       // home:  Adminlogin(),
-      home:  Adminhome(),
-      // home:  studentDetails(),
+      // home:  Adminhome(),
+      // home:  Adminorganizer(),
+      // home: Splash2(),
+      // home: Assignbottum(),
+      home: Eventorgbottum(),
+
     );
   }
 }

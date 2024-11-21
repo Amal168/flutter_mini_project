@@ -51,35 +51,36 @@ class _studentDetailsState extends State<studentDetails> {
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
               SizedBox(
-                height: 10,
+                height:10,
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Text(
                     'ID Numdaer:${widget.id}',
-                    style: TextStyle(fontWeight: FontWeight.bold),
+                    style: TextStyle(fontWeight: FontWeight.bold,fontSize: 15),
                   ),
                   SizedBox(
-                    width: 20,
+                    width: 30,
                   ),
                   Text(
                     'Department:${widget.department}',
-                    style: TextStyle(fontWeight: FontWeight.bold),
+                    style: TextStyle(fontWeight: FontWeight.bold,fontSize: 15),
                   ),
                   SizedBox(
-                    width: 20,
+                    width: 30,
                   ),
                   Text(
                     'Phone Numder:${widget.phnumber}',
-                    style: TextStyle(fontWeight: FontWeight.bold),
+                    style: TextStyle(fontWeight: FontWeight.bold,fontSize: 15),
                   ),
                   SizedBox(
-                    width: 20,
+                    width: 30,
                   ),
                   Text(
                     'Location:${widget.location}',
-                    style: TextStyle(fontWeight: FontWeight.bold),
+                    style: TextStyle(fontWeight: FontWeight.bold,fontSize: 15),
                   ),
                 ],
               ),
