@@ -1,6 +1,10 @@
+import 'dart:io';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:get/get.dart';
+import 'package:image_picker/image_picker.dart';
 
 class custemtextformfield extends StatelessWidget {
   String hinttext;
@@ -9,10 +13,14 @@ class custemtextformfield extends StatelessWidget {
   double? high;
   double? verticalPadding;
   Widget? priffixicon;
+  TextStyle? styles;
+  int? lines;
 
   custemtextformfield({
     super.key,
     this.high,
+    this.styles,
+    this.lines,
     this.verticalPadding,
     required this.hinttext,
     required this.controller,
@@ -22,11 +30,13 @@ class custemtextformfield extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: high,
       child: TextFormField(
+        maxLines: lines,
         validator: validate,
         controller: controller,
+        style: styles,
         decoration: InputDecoration(
             contentPadding: EdgeInsets.symmetric(
                 vertical: verticalPadding ?? 20.0, horizontal: 20.0),
@@ -108,14 +118,14 @@ class _custemtoggleState extends State<custemtoggle> {
   @override
   Widget build(BuildContext context) {
     return IconButton(
-      iconSize: 40,
+        iconSize: 40,
         onPressed: () {
           togle();
         },
         icon: toggle
-            ? Icon(Icons.check_box_outlined,)
-            : Icon(Icons.check_box_outline_blank_outlined));
+            ? const Icon(
+                Icons.check_box_outlined,
+              )
+            : const Icon(Icons.check_box_outline_blank_outlined));
   }
 }
-
-

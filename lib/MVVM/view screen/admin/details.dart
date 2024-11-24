@@ -29,14 +29,14 @@ class _studentDetailsState extends State<studentDetails> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text(
+        title: const Text(
           "Student Details",
           style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
         ),
       ),
       body: Center(
         child: Padding(
-          padding: EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(8.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -48,55 +48,68 @@ class _studentDetailsState extends State<studentDetails> {
               ),
               Text(
                 widget.name,
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                style:
+                    const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
-              SizedBox(
-                height:10,
+              const SizedBox(
+                height: 10,
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Text(
-                    'ID Numdaer:${widget.id}',
-                    style: TextStyle(fontWeight: FontWeight.bold,fontSize: 15),
+                    'ID Numdaer          ${widget.id}',
+                    style: const TextStyle(
+                        fontWeight: FontWeight.bold, fontSize: 15),
                   ),
-                  SizedBox(
-                    width: 30,
-                  ),
-                  Text(
-                    'Department:${widget.department}',
-                    style: TextStyle(fontWeight: FontWeight.bold,fontSize: 15),
-                  ),
-                  SizedBox(
-                    width: 30,
+                  const SizedBox(
+                    height: 20,
                   ),
                   Text(
-                    'Phone Numder:${widget.phnumber}',
-                    style: TextStyle(fontWeight: FontWeight.bold,fontSize: 15),
+                    'Department         ${widget.department}',
+                    style: const TextStyle(
+                        fontWeight: FontWeight.bold, fontSize: 15),
                   ),
-                  SizedBox(
-                    width: 30,
+                  const SizedBox(
+                    height: 20,
                   ),
                   Text(
-                    'Location:${widget.location}',
-                    style: TextStyle(fontWeight: FontWeight.bold,fontSize: 15),
+                    'Phone Numder    ${widget.phnumber}',
+                    style: const TextStyle(
+                        fontWeight: FontWeight.bold, fontSize: 15),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  Text(
+                    'Location                ${widget.location}',
+                    style: const TextStyle(
+                        fontWeight: FontWeight.bold, fontSize: 15),
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   custembutton(
-                      onpress: () {}, text: "Accept", color: buttoncolor.d),
-                  SizedBox(
+                      onpress: () {
+                        Navigator.pop(context);
+                      },
+                      text: "Accept",
+                      color: buttoncolor.d),
+                  const SizedBox(
                     width: 10,
                   ),
                   custembutton(
-                      onpress: () {}, text: "Reject", color: buttoncolor.e)
+                      onpress: () {
+                        Navigator.pop(context);
+                      },
+                      text: "Reject",
+                      color: buttoncolor.e)
                 ],
               )
             ],
@@ -110,11 +123,7 @@ class _studentDetailsState extends State<studentDetails> {
 class organiserDetails extends StatefulWidget {
   String image;
   String name;
-  organiserDetails({
-    super.key,
-    required this.image,
-    required this.name
-  });
+  organiserDetails({super.key, required this.image, required this.name});
 
   @override
   State<organiserDetails> createState() => _organiserDetailsState();
@@ -128,14 +137,14 @@ class _organiserDetailsState extends State<organiserDetails> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text(
-          "Student Details",
+        title: const Text(
+          "Organizer",
           style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
         ),
       ),
       body: Center(
         child: Padding(
-          padding: EdgeInsets.all(40.0),
+          padding: const EdgeInsets.all(40.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -144,36 +153,41 @@ class _organiserDetailsState extends State<organiserDetails> {
                 backgroundImage: NetworkImage(widget.image),
               ),
               Text(
-                '${widget.name}',
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                widget.name,
+                style:
+                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
                     'ID Number:',
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                   custemtextformfield(
                     hinttext: "ID Number",
                     controller: idcontroller,
-                    validate: (p0) {},
+                    validate: (p0) {
+                      return null;
+                    },
                   ),
-                  Text(
+                  const Text(
                     "Phone No",
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                   custemtextformfield(
                     hinttext: "Phone Number",
                     controller: numbercontroller,
-                    validate: (p0) {},
+                    validate: (p0) {
+                      return null;
+                    },
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Row(
@@ -181,12 +195,17 @@ class _organiserDetailsState extends State<organiserDetails> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   custembutton(
-                      onpress: () {}, text: "Accept", color: buttoncolor.d),
-                  SizedBox(
+                      onpress: () {
+                        Navigator.pop(context);
+
+                      }, text: "Accept", color: buttoncolor.d),
+                  const SizedBox(
                     width: 10,
                   ),
                   custembutton(
-                      onpress: () {}, text: "Reject", color: buttoncolor.e)
+                      onpress: () {
+                        Navigator.pop(context);
+                      }, text: "Reject", color: buttoncolor.e)
                 ],
               )
             ],

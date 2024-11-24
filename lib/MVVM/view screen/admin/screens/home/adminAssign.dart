@@ -15,7 +15,7 @@ class _AdminassignState extends State<Adminassign> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text(
+        title: const Text(
           "Assign",
           style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
         ),
@@ -29,7 +29,7 @@ class _AdminassignState extends State<Adminassign> {
                 children: [
                   Row(
                     children: [
-                      custemtoggle(),
+                      const custemtoggle(),
                       Container(
                         width: 293,
                         height: 51,
@@ -37,16 +37,16 @@ class _AdminassignState extends State<Adminassign> {
                             color: buttoncolor.g,
                             border: Border.all(),
                             borderRadius: BorderRadius.circular(20)),
-                        child: Center(child: Text("Kadhakali")),
+                        child: const Center(child: Text("Kadhakali")),
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                 height: 20,
               ),
               Row(
                 children: [
-                  custemtoggle(),
+                  const custemtoggle(),
                   Container(
                     width: 293,
                     height: 51,
@@ -54,7 +54,7 @@ class _AdminassignState extends State<Adminassign> {
                         color: buttoncolor.g,
                         border: Border.all(),
                         borderRadius: BorderRadius.circular(20)),
-                    child: Center(child: Text("Kolkali")),
+                    child: const Center(child: Text("Kolkali")),
                   ),
                 ],)
                 ],

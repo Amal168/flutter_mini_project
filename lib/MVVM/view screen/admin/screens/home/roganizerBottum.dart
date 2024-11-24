@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mini_project/MVVM/view%20screen/admin/details.dart';
+import 'package:flutter_mini_project/MVVM/view%20screen/admin/screens/home/adminOrganizer.dart';
 
 class organizerBottom extends StatelessWidget {
   final List<Map<String, dynamic>> studentList = const [
@@ -32,12 +33,15 @@ class organizerBottom extends StatelessWidget {
     },
   ];
 
+  const organizerBottom({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         centerTitle: true,
-        title: Text(
+        title: const Text(
           "Organizer List",
           style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
         ),
@@ -47,7 +51,7 @@ class organizerBottom extends StatelessWidget {
         itemBuilder: (context, index) {
           final student = studentList[index];
           return Card(
-            margin: EdgeInsets.all(8),
+            margin: const EdgeInsets.all(8),
             child: ListTile(
               onTap: () {
                 Navigator.push(
@@ -58,8 +62,14 @@ class organizerBottom extends StatelessWidget {
                               name: student["name"],
                             )));
               },
-              leading: CircleAvatar(
-                backgroundImage: NetworkImage(student["image"]),
+              leading: InkWell(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (_) => Adminorganizer()));
+                },
+                child: CircleAvatar(
+                  backgroundImage: NetworkImage(student["image"]),
+                ),
               ),
               title: Text(student["name"]),
               subtitle: Text(' ${student["idname"]}'),

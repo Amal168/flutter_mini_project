@@ -8,13 +8,13 @@ class eventbutton extends StatefulWidget {
   // String StageNo;
   // String Time;
 
-  eventbutton(
-      {super.key,
-      // required this.name,
-      // required this.Date,
-      // required this.StageNo,
-      // required this.Time,
-      });
+  const eventbutton({
+    super.key,
+    // required this.name,
+    // required this.Date,
+    // required this.StageNo,
+    // required this.Time,
+  });
 
   @override
   State<eventbutton> createState() => _eventbuttonState();
@@ -26,7 +26,7 @@ class _eventbuttonState extends State<eventbutton> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           "Event",
           style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
         ),
@@ -34,15 +34,14 @@ class _eventbuttonState extends State<eventbutton> {
       ),
       body: Center(
         child: ListView.builder(
-          
             itemCount: 1,
             itemBuilder: (context, index) {
               return Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Card(
-                  color: buttoncolor.f,
+                  color: buttoncolor.g,
                   child: ListTile(
-                    
+                    textColor: Colors.white,
                     title: Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: Column(
@@ -51,15 +50,17 @@ class _eventbuttonState extends State<eventbutton> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              Text(" "),
-                              Text("name"),
+                              const Text(" "),
+                              const Text("name"),
                               IconButton(
-                                  onPressed: () {}, icon: Icon(Icons.delete))
+                                  onPressed: () {},
+                                  icon: const Icon(Icons.delete,
+                                      color: Colors.black))
                             ],
                           ),
-                          Text("Date : "),
-                          Text("time : "),
-                          Text("Stage : "),
+                          const Text("Date : "),
+                          const Text("time : "),
+                          const Text("Stage : "),
                         ],
                       ),
                     ),
@@ -70,12 +71,15 @@ class _eventbuttonState extends State<eventbutton> {
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: buttoncolor.h,
-        shape: Border(),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
         onPressed: () {
           Navigator.push(
-              context, MaterialPageRoute(builder: (_) => Addevent()));
+              context, MaterialPageRoute(builder: (_) => const Addevent()));
         },
-        child: Icon(Icons.add),
+        child: Icon(
+          Icons.add,
+          color: Colors.white,
+        ),
       ),
     );
   }

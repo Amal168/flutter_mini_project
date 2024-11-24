@@ -20,7 +20,7 @@ class _EventeventState extends State<Eventevent> {
             InkWell(
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (_) => Participationlist()));
+                    MaterialPageRoute(builder: (_) => const Participationlist()));
               },
               child: Container(
                 height: 50,
@@ -29,7 +29,7 @@ class _EventeventState extends State<Eventevent> {
                 decoration: BoxDecoration(
                     color: buttoncolor.g,
                     borderRadius: BorderRadius.circular(15)),
-                    child: Center(child: Text("Kuchupudi"),),
+                    child: const Center(child: Text("Kuchupudi"),),
               ),
             )
           ],

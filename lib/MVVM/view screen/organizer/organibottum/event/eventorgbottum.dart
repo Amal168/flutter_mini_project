@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mini_project/MVVM/utils/widgets/customcolor.dart';
+import 'package:flutter_mini_project/MVVM/view%20screen/organizer/organibottum/event/eventResult.dart';
 import 'package:flutter_mini_project/MVVM/view%20screen/organizer/organibottum/event/eventevent.dart';
 
 class Eventorgbottum extends StatefulWidget {
@@ -27,7 +28,9 @@ class _EventorgbottumState extends State<Eventorgbottum> with TickerProviderStat
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+      ),
       body: Column(
         children: [
           Padding(
@@ -48,8 +51,8 @@ class _EventorgbottumState extends State<Eventorgbottum> with TickerProviderStat
                   // ),
                   controller: tabcontrol,
                   isScrollable: true,
-                  labelPadding: EdgeInsets.symmetric(horizontal: 50),
-                  tabs: [
+                  labelPadding: const EdgeInsets.symmetric(horizontal: 50),
+                  tabs: const [
                     Tab(child: Text("Event",style: TextStyle(color: Colors.white),)), 
                   Tab(child: Text("Result",style: TextStyle(color: Colors.white)))],
                 ),
@@ -59,9 +62,10 @@ class _EventorgbottumState extends State<Eventorgbottum> with TickerProviderStat
           Expanded(
             child: TabBarView(
               controller: tabcontrol,
-              children: [
+              children: const [
                 Eventevent(),
-                Center(child: Text("data")),
+                // Center(child: Text("data")),
+               Eventresult()
               ],
             ),
           ),

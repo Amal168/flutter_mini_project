@@ -20,7 +20,7 @@ class _AdminorganizerState extends State<Adminorganizer> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text("Organizer ",
+        title: const Text("Organizer ",
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30)),
       ),
       body: Center(
@@ -30,41 +30,46 @@ class _AdminorganizerState extends State<Adminorganizer> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                CircleAvatar(
+                const CircleAvatar(
                   radius: 70,
                   backgroundImage: NetworkImage("image"),
                 ),
-                SizedBox(height: 20,),
-                Text("Name",
+                const SizedBox(height: 20,),
+                const Text("Name",
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Text("ID Number",
+                    const Text("ID Number",
                         style: TextStyle(fontWeight: FontWeight.bold)),
                     custemtextformfield(
                       hinttext: "000000",
                       controller: Idcontroller,
-                      validate: (p0) {},
+                      validate: (p0) {
+                        return null;
+                      },
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
-                    Text("Phone No",
+                    const Text("Phone No",
                         style: TextStyle(fontWeight: FontWeight.bold)),
                     custemtextformfield(
                       hinttext: "000000",
                       controller: phonecontroller,
-                      validate: (p0) {},
+                      validate: (p0) {
+                        return null;
+                      },
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
-                    Text("Assign", style: TextStyle(fontWeight: FontWeight.bold)),
+                     Text("Assign", style: TextStyle(fontWeight: FontWeight.bold)),
                     custemtextformfield(
                       high: 150,
-                      hinttext: "000000",
+                      hinttext: "*kuchipudi \n *kolakli",
+                      styles: TextStyle(fontWeight: FontWeight.bold,),
                       verticalPadding: 90,
                       controller: assigncontroller,
                       validate: (p0) {
@@ -74,13 +79,13 @@ class _AdminorganizerState extends State<Adminorganizer> {
                   ],
                 ),
 
-                SizedBox(height: 40,),
+                const SizedBox(height: 40,),
                 SizedBox(
                   width: double.infinity,
                   child: custembutton(
                       onpress: () {
                         Navigator.push(context,
-                            MaterialPageRoute(builder: (_) => Adminassign()));
+                            MaterialPageRoute(builder: (_) => const Adminassign()));
                       },
                       text: "Assign",
                       color: buttoncolor.f),

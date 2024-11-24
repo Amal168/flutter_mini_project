@@ -35,7 +35,7 @@ class _AdminloginState extends State<Adminlogin> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
+              const Text(
                 "Login ",
                 style: TextStyle(
                     fontSize: 30,

@@ -4,7 +4,7 @@ import 'package:flutter_mini_project/MVVM/view%20screen/admin/addevent.dart';
 import 'package:flutter_mini_project/MVVM/view%20screen/organizer/organibottum/assign/editEvient.dart';
 
 class Assignbottum extends StatefulWidget {
-  Assignbottum({
+  const Assignbottum({
     super.key,
   });
 
@@ -20,7 +20,7 @@ class _AssignbottumState extends State<Assignbottum> {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         excludeHeaderSemantics: false,
-        title: Text(
+        title: const Text(
           " ",
         ),
         centerTitle: true,
@@ -32,7 +32,7 @@ class _AssignbottumState extends State<Assignbottum> {
               return Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Card(
-                  color: buttoncolor.f,
+                  color: buttoncolor.g,
                   child: ListTile(
                     textColor: Colors.white,
                     title: Padding(
@@ -43,36 +43,36 @@ class _AssignbottumState extends State<Assignbottum> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              Text(" "),
-                              Text(" "),
-                              Text("name"),
-                              SizedBox(
+                              const Text(" "),
+                              const Text(" "),
+                              const Text("name"),
+                              const SizedBox(
                                 width: 20,
                               ),
                               IconButton(
-                                  color: Colors.white,
+                                  color: Colors.black,
                                   onPressed: () {},
-                                  icon: Icon(Icons.delete))
+                                  icon: const Icon(Icons.delete))
                             ],
                           ),
-                          Text("Date : "),
-                          SizedBox(
+                          const Text("Date : "),
+                          const SizedBox(
                             height: 10,
                           ),
-                          Text("time : "),
+                          const Text("time : "),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text("Stage : "),
+                              const Text("Stage : "),
                               IconButton(
-                                  color: Colors.white,
+                                  color: Colors.black,
                                   onPressed: () {
                                     Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                            builder: (_) => Editevient()));
+                                            builder: (_) => const Editevient()));
                                   },
-                                  icon: Icon(Icons.edit_note))
+                                  icon: const Icon(Icons.edit_note))
                             ],
                           ),
                         ],

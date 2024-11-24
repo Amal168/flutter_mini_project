@@ -8,7 +8,7 @@ class StudentBottom extends StatelessWidget {
           "https://th.bing.com/th/id/OIP.rvSWtRd_oPRTwDoTCmkP5gHaE8?rs=1&pid=ImgDetMain",
       "name": "Uther",
       "idname": "001",
-      "Department": "Computer Science",
+      "Department": "Kuchipodi",
       "Phone Number": "5457425",
       "Location": "vsgxvgv"
     },
@@ -17,7 +17,7 @@ class StudentBottom extends StatelessWidget {
           "https://th.bing.com/th/id/OIP.rvSWtRd_oPRTwDoTCmkP5gHaE8?rs=1&pid=ImgDetMain",
       "name": "Chothy",
       "idname": "002",
-      "Department": "Computer Science",
+      "Department": "Barathanatyam",
       "Phone Number": "5457425",
       "Location": "vsgxvgv"
     },
@@ -26,7 +26,7 @@ class StudentBottom extends StatelessWidget {
           "https://th.bing.com/th/id/OIP.rvSWtRd_oPRTwDoTCmkP5gHaE8?rs=1&pid=ImgDetMain",
       "name": "Avinash",
       "idname": "003",
-      "Department": "Computer Science",
+      "Department": "Kolkalli",
       "Phone Number": "5457425",
       "Location": "vsgxvgv"
     },
@@ -35,7 +35,7 @@ class StudentBottom extends StatelessWidget {
           "https://th.bing.com/th/id/OIP.rvSWtRd_oPRTwDoTCmkP5gHaE8?rs=1&pid=ImgDetMain",
       "name": "Ullash",
       "idname": "004",
-      "Department": "Computer Science",
+      "Department": "Daphumutu",
       "Phone Number": "5457425",
       "Location": "vsgxvgv"
     },
@@ -44,7 +44,7 @@ class StudentBottom extends StatelessWidget {
           "https://th.bing.com/th/id/OIP.rvSWtRd_oPRTwDoTCmkP5gHaE8?rs=1&pid=ImgDetMain",
       "name": "Ganash",
       "idname": "005",
-      "Department": "Computer Science",
+      "Department": "Mohiniyatam",
       "Phone Number": "5457425",
       "Location": "vsgxvgv"
     },
@@ -53,7 +53,7 @@ class StudentBottom extends StatelessWidget {
           "https://th.bing.com/th/id/OIP.rvSWtRd_oPRTwDoTCmkP5gHaE8?rs=1&pid=ImgDetMain",
       "name": "RR",
       "idname": "006",
-      "Department": "Computer Science",
+      "Department": "Kuchipudy",
       "Phone Number": "5457425",
       "Location": "vsgxvgv"
     },
@@ -62,7 +62,7 @@ class StudentBottom extends StatelessWidget {
           "https://th.bing.com/th/id/OIP.rvSWtRd_oPRTwDoTCmkP5gHaE8?rs=1&pid=ImgDetMain",
       "name": "Upper",
       "idname": "007",
-      "Department": "Computer Science",
+      "Department": "Barathanyatiam",
       "Phone Number": "5457425",
       "Location": "vsgxvgv"
     },
@@ -71,7 +71,7 @@ class StudentBottom extends StatelessWidget {
           "https://th.bing.com/th/id/OIP.rvSWtRd_oPRTwDoTCmkP5gHaE8?rs=1&pid=ImgDetMain",
       "name": "Sajan",
       "idname": "008",
-      "Department": "Computer Science",
+      "Department": "kolkalli",
       "Phone Number": "5457425",
       "Location": "vsgxvgv"
     },
@@ -80,7 +80,7 @@ class StudentBottom extends StatelessWidget {
           "https://th.bing.com/th/id/OIP.rvSWtRd_oPRTwDoTCmkP5gHaE8?rs=1&pid=ImgDetMain",
       "name": "Odian",
       "idname": "009",
-      "Department": "Computer Science",
+      "Department":"Mohiniyatam",
       "Phone Number": "5457425",
       "Location": "vsgxvgv"
     },
@@ -89,18 +89,21 @@ class StudentBottom extends StatelessWidget {
           "https://th.bing.com/th/id/OIP.rvSWtRd_oPRTwDoTCmkP5gHaE8?rs=1&pid=ImgDetMain",
       "name": "Goban",
       "idname": "010",
-      "Department": "Computer Science",
+      "Department": "Daphumutu",
       "Phone Number": "5457425",
       "Location": "vsgxvgv"
     }
   ];
 
+  const StudentBottom({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         centerTitle: true,
-        title: Text(
+        title: const Text(
           "Students List",
           style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
         ),
@@ -110,7 +113,7 @@ class StudentBottom extends StatelessWidget {
         itemBuilder: (context, index) {
           final student = studentList[index];
           return Card(
-            margin: EdgeInsets.all(8),
+            margin: const EdgeInsets.all(8),
             child: ListTile(
               onTap: () {
                 Navigator.push(

@@ -20,7 +20,7 @@ class _AddeventState extends State<Addevent> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Add Event",
+        title: const Text("Add Event",
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30)),
         centerTitle: true,
       ),
@@ -33,39 +33,47 @@ class _AddeventState extends State<Addevent> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text("Name", style: TextStyle(fontWeight: FontWeight.bold)),
+                  const Text("Name", style: TextStyle(fontWeight: FontWeight.bold)),
                   custemtextformfield(
                     hinttext: "00000",
                     controller: namecontroller,
-                    validate: (p0) {},
+                    validate: (p0) {
+                      return null;
+                    },
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
-                  Text("Date", style: TextStyle(fontWeight: FontWeight.bold)),
+                  const Text("Date", style: TextStyle(fontWeight: FontWeight.bold)),
                   custemtextformfield(
                     hinttext: "00000",
                     controller: datecontroller,
-                    validate: (p0) {},
+                    validate: (p0) {
+                      return null;
+                    },
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
-                  Text("Stage On",
+                  const Text("Stage On",
                       style: TextStyle(fontWeight: FontWeight.bold)),
                   custemtextformfield(
                     hinttext: "00000",
                     controller: stagenocontroller,
-                    validate: (p0) {},
+                    validate: (p0) {
+                      return null;
+                    },
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
-                  Text("Time", style: TextStyle(fontWeight: FontWeight.bold)),
+                  const Text("Time", style: TextStyle(fontWeight: FontWeight.bold)),
                   custemtextformfield(
                     hinttext: "00000",
                     controller: timecontroller,
-                    validate: (p0) {},
+                    validate: (p0) {
+                      return null;
+                    },
                   ),
                 ],
               ),

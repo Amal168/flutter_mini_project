@@ -3,55 +3,49 @@ import 'package:flutter_mini_project/MVVM/utils/widgets/custem.dart';
 import 'package:flutter_mini_project/MVVM/utils/widgets/customcolor.dart';
 import 'package:flutter_mini_project/MVVM/view%20screen/admin/screens/home/adminhome.dart';
 import 'package:flutter_mini_project/MVVM/view%20screen/organizer/organibottum/organizerhome.dart';
+import 'package:flutter_mini_project/MVVM/view%20screen/students/studentHome.dart';
 import 'package:flutter_mini_project/main.dart';
 import 'package:get/get.dart';
+import 'package:get/get_connect/http/src/utils/utils.dart';
 
-class Registration2 extends StatefulWidget {
-  const Registration2({super.key});
+class Registration3 extends StatefulWidget {
+  const Registration3({super.key});
 
   @override
-  State<Registration2> createState() => _Registration2State();
+  State<Registration3> createState() => _Registration3State();
 }
 
-class _Registration2State extends State<Registration2> {
+class _Registration3State extends State<Registration3> {
   TextEditingController namecontroller = TextEditingController();
   TextEditingController phonecontroller = TextEditingController();
   TextEditingController emailcontroller = TextEditingController();
   TextEditingController idnocontroller = TextEditingController();
-  // String adminname = "admin";
-  // String adminpas = "123456";
-  // final formkey = GlobalKey<FormState>();
-
-  // @override
-  // void dispose() {
-  //   usercontroller.dispose();
-  //   passwordcontroller.dispose();
-  //   super.dispose();
-  // }
+  TextEditingController depcontroller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        automaticallyImplyLeading:  false,
+      ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Container(
-              height: 111,
-              decoration: const BoxDecoration(
-                  image:
-                      DecorationImage(image: AssetImage("assest/image_1.png"))),
-            ),
+            // Container(
+            //   height: 111,
+            //   decoration: const BoxDecoration(
+            //       image:
+            //           DecorationImage(image: AssetImage("assest/image_1.png"))),
+            // ),
             const Text(
               "Registration",
               style: TextStyle(
-                  fontSize: 30,
+                  fontSize: 18,
                   fontWeight: FontWeight.bold,
                   color: primarycolor.c),
             ),
-            const SizedBox(
-              height: 80,
-            ),
+            
             const SizedBox(
               height: 10,
             ),
@@ -119,7 +113,26 @@ class _Registration2State extends State<Registration2> {
                         return null;
                       }),
                 ),
+                const SizedBox(
+                  height: 10,
+                ),
+                const Text(
+                  "Department",
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                SizedBox(
+                  width: mq.width * 0.8,
+                  child: custemtextformfield(
+                      hinttext: "Enter Your Departmaet",
+                      controller: depcontroller,
+                      validate: (p0) {
+                        return null;
+                      }),
+                ),
               ],
+            ),
+            const SizedBox(
+              height: 80,
             ),
             const SizedBox(
               height: 20,
@@ -129,7 +142,7 @@ class _Registration2State extends State<Registration2> {
               child: custembutton(
                 onpress: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (_) => Organizerassign()));
+                      MaterialPageRoute(builder: (_) => Studenthome()));
                 },
                 text: "Submit",
                 color: primarycolor.c,

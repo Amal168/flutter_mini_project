@@ -3,22 +3,25 @@ import 'package:flutter_mini_project/MVVM/utils/widgets/customcolor.dart';
 import 'package:flutter_mini_project/MVVM/view%20screen/admin/screens/home/eventBottum.dart';
 import 'package:flutter_mini_project/MVVM/view%20screen/admin/screens/home/roganizerBottum.dart';
 import 'package:flutter_mini_project/MVVM/view%20screen/admin/screens/home/studentBottum.dart';
+import 'package:flutter_mini_project/MVVM/view%20screen/organizer/organibottum/assign/assignbottum.dart';
+import 'package:flutter_mini_project/MVVM/view%20screen/organizer/organibottum/event/eventorgbottum.dart';
+import 'package:flutter_mini_project/MVVM/view%20screen/students/studentEvent/EventStudentlist.dart';
+import 'package:flutter_mini_project/MVVM/view%20screen/students/studentResult/Resultstudentlist.dart';
 
-class Adminhome extends StatefulWidget {
-  const Adminhome({super.key});
+class Studenthome extends StatefulWidget {
+  const Studenthome({super.key});
 
   @override
-  State<Adminhome> createState() => _AdminhomeState();
+  State<Studenthome> createState() => _StudenthomeState();
 }
 
-class _AdminhomeState extends State<Adminhome> {
+class _StudenthomeState extends State<Studenthome> {
 
   int myindex = 0;
 
   List<Widget> myList = [
-    StudentBottom(),
-    organizerBottom(),
-    eventbutton(),
+  Eventstudentlist(),
+  Resultstudentlist(),
   ];
 
   @override
@@ -26,13 +29,12 @@ class _AdminhomeState extends State<Adminhome> {
     return Scaffold(
       body: Center(child: myList[myindex]),
       bottomNavigationBar: Padding(
-        padding: const EdgeInsets.all(10.0),
+        padding: const EdgeInsets.all(20.0),
         child: Card(
-          elevation: 10,
           child: BottomNavigationBar(
-            backgroundColor: buttoncolor.c,
+            backgroundColor: buttoncolor.f,
             selectedItemColor: buttoncolor.h,
-            unselectedItemColor: Colors.white,
+            unselectedItemColor:Colors.white,
             onTap: (value) {
               setState(() {
                 myindex = value;
@@ -42,17 +44,13 @@ class _AdminhomeState extends State<Adminhome> {
             items: const [
               BottomNavigationBarItem(
                 icon: Icon(Icons.person),
-                label: "Student",
+                label: "Event",
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.group),
-                label: "Organizer",
+                label: "Result",
               ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.event),
-                label: "Event",
-              ),
-            ],
+              ],
           ),
         ),
       ),
