@@ -43,24 +43,26 @@ class _eventbuttonState extends State<eventbutton> {
                   child: ListTile(
                     textColor: Colors.white,
                     title: Padding(
-                      padding: const EdgeInsets.all(10.0),
+                      padding: const EdgeInsets.all(5.0),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              const Text(" "),
-                              const Text("name"),
+                              SizedBox(width: 90,),
+                               Text("Mohiniyattam",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),),
+                               SizedBox(width: 20,),
                               IconButton(
+                                iconSize: 35,
                                   onPressed: () {},
                                   icon: const Icon(Icons.delete,
                                       color: Colors.black))
                             ],
                           ),
-                          const Text("Date : "),
-                          const Text("time : "),
-                          const Text("Stage : "),
+                          const Text("Date : 7/12/2023",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+                          const Text("time : 10:00",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+                          const Text("Stage : 3",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
                         ],
                       ),
                     ),

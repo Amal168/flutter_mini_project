@@ -36,35 +36,54 @@ class _AssignbottumState extends State<Assignbottum> {
                   child: ListTile(
                     textColor: Colors.white,
                     title: Padding(
-                      padding: const EdgeInsets.all(10.0),
+                      padding: const EdgeInsets.all(5.0),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              const Text(" "),
-                              const Text(" "),
-                              const Text("name"),
+                             SizedBox(width: 70,),
+                              const Text("Mohiniyatam",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 25),),
                               const SizedBox(
                                 width: 20,
                               ),
                               IconButton(
+                                iconSize: 35,
                                   color: Colors.black,
                                   onPressed: () {},
                                   icon: const Icon(Icons.delete))
                             ],
                           ),
-                          const Text("Date : "),
+                          Row(
+                            children: [
+                              const Text("Date : ",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
+                          const Text("13/07/2023 ",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
+
+                            ],
+                          ),
                           const SizedBox(
                             height: 10,
                           ),
-                          const Text("time : "),
+                          Row(
+                            children: [
+                              const Text("time : ",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
+                              const Text("10:00 am ",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
+                            ],
+                          ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              const Text("Stage : "),
+                              Row(
+                                children: [
+                                  const Text("Stage : ",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
+                                  const Text("3 ",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
+                                ],
+                                
+                              ),
+                              SizedBox(width: 190,),
                               IconButton(
+                                iconSize: 35,
                                   color: Colors.black,
                                   onPressed: () {
                                     Navigator.push(

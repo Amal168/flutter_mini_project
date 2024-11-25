@@ -49,44 +49,48 @@ class _studentDetailsState extends State<studentDetails> {
               Text(
                 widget.name,
                 style:
-                    const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    const TextStyle(fontSize: 30, fontWeight: FontWeight.bold,),
               ),
               const SizedBox(
                 height: 10,
               ),
               Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
-                    'ID Numdaer          ${widget.id}',
-                    style: const TextStyle(
-                        fontWeight: FontWeight.bold, fontSize: 15),
-                  ),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  Text(
-                    'Department         ${widget.department}',
-                    style: const TextStyle(
-                        fontWeight: FontWeight.bold, fontSize: 15),
-                  ),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  Text(
-                    'Phone Numder    ${widget.phnumber}',
-                    style: const TextStyle(
-                        fontWeight: FontWeight.bold, fontSize: 15),
-                  ),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  Text(
-                    'Location                ${widget.location}',
-                    style: const TextStyle(
-                        fontWeight: FontWeight.bold, fontSize: 15),
-                  ),
+                 Padding(
+                   padding: const EdgeInsets.only(left:60),
+                   child: Table(
+                      defaultColumnWidth: FixedColumnWidth(130.0),
+
+                    children: <TableRow>[
+                    TableRow(children: [
+                      Text("ID Number",style:
+                    const TextStyle(fontSize: 20, fontWeight: FontWeight.bold,),),
+                      Text(widget.id,style:
+                    const TextStyle(fontSize: 20, fontWeight: FontWeight.bold,),)
+                    ]),
+                    TableRow(children: [
+                      Text("Phone No",style:
+                    const TextStyle(fontSize: 20, fontWeight: FontWeight.bold,),),
+                      Text(widget.phnumber,style:
+                    const TextStyle(fontSize: 20, fontWeight: FontWeight.bold,),)
+                    ]),
+                    TableRow(children: [
+                      Text("Department",style:
+                    const TextStyle(fontSize: 20, fontWeight: FontWeight.bold,),),
+                      Text(widget.department,style:
+                    const TextStyle(fontSize: 20, fontWeight: FontWeight.bold,),)
+                    ]),
+                    TableRow(children: [
+                      Text("Location",style:
+                    const TextStyle(fontSize: 20, fontWeight: FontWeight.bold,),),
+                      Text(widget.location,style:
+                    const TextStyle(fontSize: 20, fontWeight: FontWeight.bold,),)
+                    ]),
+                    
+                   ],),
+                 )
                 ],
               ),
               const SizedBox(

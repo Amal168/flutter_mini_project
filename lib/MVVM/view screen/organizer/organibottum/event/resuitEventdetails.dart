@@ -26,16 +26,47 @@ class _ResuiteventdetailsState extends State<Resuiteventdetails> {
             SizedBox(height: 30,),
             Text(widget.name,style: TextStyle(fontWeight: FontWeight.bold,fontSize: 17),),
             SizedBox(height: 20,),
-            Column(children: [
-              Text("Date       18/07/23"),
-              Column(crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text("Stage No   02"),
-                ],
-              ),
-              Text("Time        1:30 pm"),
-              Text("Location   Ground"),
-            ],),
+            Padding(
+              padding: const EdgeInsets.only(left: 60),
+              child: Column(children: [
+                Table(
+                  defaultColumnWidth: FixedColumnWidth(120),
+                  children: <TableRow>[
+                  TableRow(
+                    children: [
+                      Text("data",style:
+                    const TextStyle(fontSize: 20, fontWeight: FontWeight.bold,),),
+                      Text("21/07/2023",style:
+                    const TextStyle(fontSize: 20, fontWeight: FontWeight.bold,),),
+                    ]
+                  ),
+                  TableRow(
+                    children: [
+                      Text("Stage No",style:
+                    const TextStyle(fontSize: 20, fontWeight: FontWeight.bold,),),
+                      Text("3",style:
+                    const TextStyle(fontSize: 20, fontWeight: FontWeight.bold,),),
+                    ]
+                  ),
+                  TableRow(
+                    children: [
+                      Text("Time",style:
+                    const TextStyle(fontSize: 20, fontWeight: FontWeight.bold,),),
+                      Text("10:00",style:
+                    const TextStyle(fontSize: 20, fontWeight: FontWeight.bold,),),
+                    ]
+                  ),
+                  TableRow(
+                    children: [
+                      Text("Location",style:
+                    const TextStyle(fontSize: 20, fontWeight: FontWeight.bold,),),
+                      Text("Ground",style:
+                    const TextStyle(fontSize: 20, fontWeight: FontWeight.bold,),),
+                    ]
+                  ),
+                ],)
+              ],),
+            ),
             SizedBox(height: 20,),
             Column(crossAxisAlignment: CrossAxisAlignment.start,
               children: [

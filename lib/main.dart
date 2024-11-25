@@ -5,6 +5,7 @@ import 'package:flutter_mini_project/MVVM/view%20screen/admin/screens/home/admin
 import 'package:flutter_mini_project/MVVM/view%20screen/admin/auth/adminlogin.dart';
 import 'package:flutter_mini_project/MVVM/view%20screen/admin/details.dart';
 import 'package:flutter_mini_project/MVVM/view%20screen/admin/auth/splashscreen.dart';
+import 'package:flutter_mini_project/MVVM/view%20screen/admin/screens/home/eventBottum.dart';
 import 'package:flutter_mini_project/MVVM/view%20screen/organizer/auth/slash2.dart';
 import 'package:flutter_mini_project/MVVM/view%20screen/organizer/organibottum/Appeal/appealDetail.dart';
 import 'package:flutter_mini_project/MVVM/view%20screen/organizer/organibottum/Appeal/appealList.dart';
@@ -20,6 +21,7 @@ import 'package:flutter_mini_project/MVVM/view%20screen/students/studentEvent/Ev
 import 'package:flutter_mini_project/MVVM/view%20screen/students/studentEvent/EventStudentlist.dart';
 import 'package:flutter_mini_project/MVVM/view%20screen/students/studentHome.dart';
 import 'package:flutter_mini_project/MVVM/view%20screen/students/studentResult/applyApeal.dart';
+import 'package:flutter_mini_project/table.dart';
 import 'package:get/get.dart';
 
 void main() {
@@ -41,18 +43,21 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
+      // home: Tables(),
+  
       // home:Splashscreen() ,
       // home:  Adminlogin(),
       // home:  Adminhome(),
       // home:  Adminorganizer(),
       // home: Splash2(),
-      home: Splash3(),
+      // home: Splash3(),
       // home: Eventdetails(),
       // home: Eventstudentlist(),
       // home: Apply(),
       // home: Assignbottum(),
+      // home: eventbutton(),
       // home: Eventorgbottum(),
-      // home: Eventresult(),
+      home: Eventresult(),
       // home: Addresult(),
       // home: CustemImagePicker(),
       // home: const ImagepickerEg(),
